@@ -1,0 +1,26 @@
+.bounding-box {
+  position: absolute;
+  box-shadow: 0 0 0 2px #149df2 inset;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.close-img {
+  position: absolute;
+  z-index: 1;
+  border: 0;
+  padding: 0;
+  margin: 0;
+  background-color: transparent;
+  top: 0;
+  right: -36px;
+  font-weight: bold;
+  font-size: 36px;
+  cursor: pointer;
+}
+
+.img-container {
+  margin-top: 45px;
+}

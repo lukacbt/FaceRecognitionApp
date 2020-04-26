@@ -1,0 +1,13 @@
+.tryItOut {
+  font-weight: bold;
+  margin-top: 50px;
+  font-size: 12px;
+  letter-spacing: 0px;
+  cursor: pointer;
+  transition: color 0.6s;
+}
+
+.tryItOut:hover {
+  color: whitesmoke;
+}
+
