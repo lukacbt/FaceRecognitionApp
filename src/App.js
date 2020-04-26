@@ -108,7 +108,7 @@ class App extends Component {
   
   onDetect = () => {
     this.setState({ imageURL: this.state.input, boxes: [], error: "" })
-    fetch("http://localhost:3000/imageurl", {
+    fetch("https://floating-citadel-50795.herokuapp.com/imageurl", {
       method: "post",
       headers: {"Content-Type": "application/json"},
       body: JSON.stringify({
@@ -118,7 +118,7 @@ class App extends Component {
       .then(response => response.json())
       .then(response => {
         if(response && this.state.route === "home") {
-          fetch("http://localhost:3000/image", {
+          fetch("https://floating-citadel-50795.herokuapp.com/image", {
             method: "put",
             headers: {"Content-Type": "application/json"},
             body: JSON.stringify({

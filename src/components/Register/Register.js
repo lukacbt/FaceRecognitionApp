@@ -18,7 +18,7 @@ class Register extends Component{
 
   onRegister = () => {
     this.props.removeImageURL()
-    fetch("http://localhost:3000/register", {
+    fetch("https://floating-citadel-50795.herokuapp.com/register", {
       method: "post",
       headers: {"Content-Type": "application/json"},
       body: JSON.stringify({
