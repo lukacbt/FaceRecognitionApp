@@ -4,19 +4,19 @@ import "./FaceRecognition.css"
 class FaceRecognition extends Component {
 
   displayText = () => {
-    if(this.props.boxes.length === 1){
+    if(!this.props.boxes) {
+      return <p style={this.props.imageURL && !this.props.error.length ? {display: "block"}: {display: "none"}}>Loading...</p>
+    }else if(this.props.boxes.length === 1){
       return <p style={this.props.imageURL && !this.props.error.length ? {display: "block"}: {display: "none"}}>There is {this.props.boxes.length} face in the picture!</p>
     }else if (this.props.boxes.length > 1) {
       return <p style={this.props.imageURL && !this.props.error.length ? {display: "block"}: {display: "none"}}>There are {this.props.boxes.length} faces in the picture!</p>
-    }else if (this.props.boxes.length === 0) {
-      return <p style={this.props.imageURL && !this.props.error.length ? {display: "block"}: {display: "none"}}>There are NO faces in the picture!</p>
     }else {
-      return <p style={this.props.imageURL && !this.props.error.length ? {display: "block"}: {display: "none"}}>Loading...</p>
+      return <p style={this.props.imageURL && !this.props.error.length ? {display: "block"}: {display: "none"}}>There are NO faces in the picture!</p>
     }
   }
 
   displayBoxes = () => {
-    if(this.props.boxes.length > 0) {
+    if (Array.isArray(this.props.boxes) && this.props.boxes.length > 0) {
       return  this.props.boxes.map((box, i) => {
         return <div key={i} className="bounding-box" style={{top: box.topRow, right: box.rightCol, bottom: box.bottomRow, left: box.leftCol}}></div>
       })

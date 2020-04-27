@@ -43,7 +43,7 @@ class App extends Component {
       error: "",
       input: "",
       imageURL: "",
-      boxes: [],
+      boxes: null,
       route: "signin",
       isSignedIn: false,
       user: {
@@ -107,7 +107,7 @@ class App extends Component {
   }
   
   onDetect = () => {
-    this.setState({ imageURL: this.state.input, boxes: [], error: "" })
+    this.setState({ imageURL: this.state.input, boxes: null, error: "" })
     fetch("https://floating-citadel-50795.herokuapp.com/imageurl", {
       method: "post",
       headers: {"Content-Type": "application/json"},
