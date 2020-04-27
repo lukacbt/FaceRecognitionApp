@@ -8,8 +8,10 @@ class FaceRecognition extends Component {
       return <p style={this.props.imageURL && !this.props.error.length ? {display: "block"}: {display: "none"}}>There is {this.props.boxes.length} face in the picture!</p>
     }else if (this.props.boxes.length > 1) {
       return <p style={this.props.imageURL && !this.props.error.length ? {display: "block"}: {display: "none"}}>There are {this.props.boxes.length} faces in the picture!</p>
-    }else {
+    }else if (this.props.boxes.length === 0) {
       return <p style={this.props.imageURL && !this.props.error.length ? {display: "block"}: {display: "none"}}>There are NO faces in the picture!</p>
+    }else {
+      return <p style={this.props.imageURL && !this.props.error.length ? {display: "block"}: {display: "none"}}>Loading...</p>
     }
   }
 
