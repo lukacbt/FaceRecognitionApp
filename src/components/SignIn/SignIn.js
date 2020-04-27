@@ -46,11 +46,11 @@ class SignIn extends Component {
             <legend className="f1 fw6 ph0 mh0">Sign In</legend>
               <div className="mt3">
                 <label className="db fw6 lh-copy f6" htmlFor="email-address">Email</label>
-                <input value={signInEmail} value={signInEmail} onChange={this.onInputChange} placeholder="Email..." autoComplete="new-password" className="pa2 input-reset ba bg-transparent hover-bg-black hover-white w-100" type="email" name="signInEmail"  id="email-address" />
+                <input value={signInEmail} onChange={this.onInputChange} placeholder="Email..." autoComplete="new-password" className="pa2 input-reset ba bg-transparent hover-bg-black hover-white w-100" type="email" name="signInEmail"  id="email-address" />
               </div>
               <div className="mv3">
                 <label className="db fw6 lh-copy f6" htmlFor="password">Password</label>
-                <input value={signInPassword} value={signInPassword} onChange={this.onInputChange} placeholder="Password..." autoComplete="new-password" className="b pa2 input-reset ba bg-transparent hover-bg-black hover-white w-100" type="password" name="signInPassword"  id="password" />
+                <input value={signInPassword} onChange={this.onInputChange} placeholder="Password..." autoComplete="new-password" className="b pa2 input-reset ba bg-transparent hover-bg-black hover-white w-100" type="password" name="signInPassword"  id="password" />
               </div>
               </fieldset>
               <div>
